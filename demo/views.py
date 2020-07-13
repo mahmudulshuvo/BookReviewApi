@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.views import View
 from .models import Book
 from django.shortcuts import render
+# from .serializers import
 
 def first(request):
     books = Book.objects.all()
@@ -17,3 +18,5 @@ class Another(View):
 
     def get(self, request):
         return HttpResponse(self.output)
+
+# class BookViewSet()
